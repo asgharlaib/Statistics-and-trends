@@ -21,7 +21,7 @@ def read_files(file1, file2):
     """
     
     file1 = pd.read_csv(f"{file1}.csv")
-    file1 = file1.drop(['Country Code', 'Indicator Code'],axis=1)
+    file1 = file1.drop(['Country Code', 'Indicator Code'],axis=1, errors = 'ignore')
     file2 = file1.transpose()
     print("Original Data Frame header")
     print(file1.head)
